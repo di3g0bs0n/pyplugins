@@ -105,7 +105,7 @@ class Plugin(IPlugin):
         return [1,5,8,7]
 ```
 
-When you execute the _run method_, yoy will get the response (returned via _return_) into a dict:
+When you execute the _run method_, you will get the response (returned via _return_) into a dict:
 
 ```python
 from pyplugins import PluginLoader

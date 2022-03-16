@@ -109,7 +109,9 @@ class PluginLoader(object):
                             continue
 
             except Exception as e:
-                print("[!] -- {}".format(str(e)))
+                exc_type, exc_obj, exc_tb = sys.exc_info()
+                fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
+                print("[!] {} [{}:{}] {}".format(exc_type, fname, exc_tb.tb_lineno, str(e)))
         sys.path.remove(self.path)
         return response
 

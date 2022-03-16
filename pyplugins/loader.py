@@ -62,7 +62,7 @@ class PluginLoader(object):
             class_ = getattr(mod, classname)
             instance = class_(**args)
         except Exception as e:
-            print("[!] {}".format(str(e)))
+            print("[!] - {}".format(str(e)))
             return None
         finally:
             sys.path.remove(os.path.dirname(path))

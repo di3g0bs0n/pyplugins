@@ -32,7 +32,7 @@ class PluginLoader(object):
         if not path.endswith(".py"):
             return False
 
-        with open(path) as f:
+        with open(path, encoding='utf-8') as f:
             node = ast.parse(f.read())
         return [n for n in node.body if isinstance(n, ast.ClassDef)][0].name
     

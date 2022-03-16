@@ -116,6 +116,4 @@ class PluginLoader(object):
 
 if __name__ == "__main__":
 
-    loader = PluginLoader(path = "/tmp/foo")
-    responses = loader.run()
-    print(responses)
+   pass

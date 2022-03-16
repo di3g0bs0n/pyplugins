@@ -109,7 +109,7 @@ class PluginLoader(object):
                             continue
 
             except Exception as e:
-                print("[!] {}".format(str(e)))
+                print("[!] -- {}".format(str(e)))
         sys.path.remove(self.path)
         return response
 
